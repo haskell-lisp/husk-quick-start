@@ -1,0 +1,24 @@
+Name:                husk-quickstart
+Version:             0.1.0.0
+Synopsis:            A Husk Quick-start with a Focus on the FFI to Haskell
+Description:         Please see README.md
+Homepage:            https://github.com/haskell-lisp/husk-quick-start
+License:             OPL
+License-File:        LICENSE
+Author:              Duncan McGreggor
+Maintainer:          oubiwann@gmail.com
+Copyright:           2016 Duncan McGreggor
+Category:            Documentation
+Build-Type:          Simple
+Cabal-Version:       >=1.10
+
+Library
+  hs-source-dirs:      src
+  Exposed-modules:     Lib
+  Build-depends:       base >= 4.7 && < 5
+                       , husk-scheme
+  Default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/haskell-lisp/husk-quick-start
