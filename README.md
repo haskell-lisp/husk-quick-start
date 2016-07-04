@@ -15,7 +15,7 @@
   * [Under the Covers](#under-the-covers-)
 * [Using Husk](#using-husk-)
   * [REPL](#repl-)
-  * [First Function](#first-function-)
+  * [Basics](#basics-)
   * [Calling Haskell](#calling-haskell-)
   * [Using Husk in a Project](#using-husk-in-a-project-)
   * [Calling Husk from Haskell](#calling-husk-from-haskell-)
@@ -169,7 +169,97 @@ huski>
 ```
 
 
-### First Function [&#x219F;](#contents)
+### Basics [&#x219F;](#contents)
+
+
+#### Arithmatic
+
+```scheme
+huski> (+ 2 15)
+17
+huski> (* 49 100)
+4900
+huski> (- 1892 1472)
+420
+huski> (/ 5 2)
+5/2
+huski> (/ 5.0 2)
+2.5
+```
+
+
+#### Equality
+
+```scheme
+huski> (= 1 1)
+#t
+huski> (< 1 1)
+#f
+huski> (<= 1 1)
+#t
+huski> (<= 2 1)
+#f
+huski> (<= 1 1)
+#t
+huski> (<= 1 2)
+#t
+huski> (<= 3 2)
+#f
+huski> (>= 3 2)
+#t
+huski> (not (= 1 1))
+#f
+```
+
+Note that the same types must be compared:
+
+```scheme
+huski> (= 5 #t)
+Invalid type: expected number, found #t
+
+Call History:
+#0: (= 5 #t)
+```
+
+
+#### Boolean Operations
+
+```scheme
+huski> (and #t #t)
+#t
+huski> (and #t #f)
+#f
+huski> (or #t #f)
+#t
+huski> (or #f #f)
+#f
+huski> (or #f #t)
+#t
+huski> (not (or #f #t))
+#f
+```
+
+#### Lists
+
+TBD
+
+
+#### Ranges
+
+TBD
+
+
+#### Comprehensions
+
+TBD
+
+
+#### Tuples
+
+TBD
+
+
+#### Defining a Function
 
 The [Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function) is a
 well-known recursive function discovered by Wilhelm Ackermann (student of the
