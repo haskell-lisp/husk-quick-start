@@ -44,7 +44,7 @@ Key Husk resources:
 * [User manual](http://justinethier.github.io/husk-scheme/manual/index.html)
 * [Haskell interface](http://justinethier.github.io/husk-scheme/manual/haskell-interface.html)
 * [Scheme API docs](http://justinethier.github.io/husk-scheme/manual/node106.html)
- 
+
 ## Dependencies [&#x219F;](#contents)
 
 * An operating system that can support Haskell.
@@ -67,9 +67,9 @@ Once you have ``git`` and ``stack`` installed, you are ready to begin.
     ```
     $ stack setup
     ```
-    
+
     At which point you should see something like the following:
-    
+
     ```
     Preparing to install GHC to an isolated location.
     This will not interfere with any system-level installation.
@@ -82,6 +82,10 @@ Once you have ``git`` and ``stack`` installed, you are ready to begin.
     $ stack build
     ```
 
+There is also a convenience ``make`` target provide that does both of these
+with one command: ``make build``. Note that the ``make`` target must be
+executed from the top-level (clone) directory.
+
 
 ## REPL [&#x219F;](#contents)
 
@@ -90,6 +94,13 @@ To start the Husk REPL using the local install of Haskell and Husk, run the foll
 ```
 $ stack exec huski
 ```
+
+or, from the top-level (clone) directory:
+
+```
+$ make repl
+```
+
 ```
   _               _        __                 _
  | |             | |       \\\               | |
