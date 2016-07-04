@@ -11,9 +11,11 @@
 * [Introduction](#introduction-)
 * [Dependencies](#dependencies-)
 * [Setup & Build](#setup--build-)
-* [Building](#building-)
-* [REPL](#repl-)
-* [First Program](#first-program-)
+  * [Dead Simple](#dead-simple-)
+  * [Under the Covers](#under-the-covers-)
+* [Using Husk](#using-husk-)
+  * [REPL](#repl-)
+  * [First Function](#first-function-)
 * [License](#license-)
 
 
@@ -131,7 +133,9 @@ using a version of Husk that's only available in the Github repo, we need to
 make the extra ``stack`` call.
 
 
-## REPL [&#x219F;](#contents)
+## Using Husk [&#x219F;](#contents)
+
+### REPL [&#x219F;](#contents)
 
 To start the Husk REPL using the local install of Haskell and Husk, run the
 following ``make`` target:
@@ -162,9 +166,38 @@ huski>
 ```
 
 
-## First Program [&#x219F;](#contents)
+### First Function [&#x219F;](#contents)
 
-TBD
+The [Ackermann function](https://en.wikipedia.org/wiki/Ackermann_function) is a
+well-known recursive function discovered by Wilhelm Ackermann (student of the
+famous mathematician David Hilbert). Go ahead and paste it into your REPL:
+
+```scheme
+(define (ackermann m n)
+  (cond
+    ((= m 0) (+ n 1))
+    ((= n 0) (ackermann (- m 1) 1))
+    (else (ackermann
+            (- m 1)
+            (ackermann m (- n 1))))))
+```
+
+You can now call it:
+
+```scheme
+huski> (ackermann 1 1)
+3
+huski> (ackermann 1 2)
+4
+huski> (ackermann 2 2)
+7
+huski> (ackermann 2 3)
+9
+huski> (ackermann 3 3)
+61
+huski> (ackermann 3 4)
+125
+```
 
 
 ## License [&#x219F;](#contents)
