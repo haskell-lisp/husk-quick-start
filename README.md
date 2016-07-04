@@ -19,11 +19,16 @@
 
 ## Introduction [&#x219F;](#contents)
 
-This quick-start aims to get you up and running with Haskell, Husk Scheme, and the FFI for Husk. It will take you from 0 Kelvin to room temperature, putting within your grasp the heat of the sun's surface.
+This quick-start aims to get you up and running with Haskell, Husk Scheme, and
+the FFI for Husk. It will take you from 0 Kelvin to room temperature, putting
+within your grasp the heat of the sun's surface.
+
 
 ### Haskell [&#x219F;](#contents)
 
-The Haskell programming language is a statically typed purely functional programming language with type inference, concurrency primitives, and lazy evaluation.
+The Haskell programming language is a statically typed purely functional
+programming language with type inference, concurrency primitives, and lazy
+evaluation.
 
 Key Haskell resources:
 
@@ -31,19 +36,27 @@ Key Haskell resources:
 * [Learn You a Haskell](http://learnyouahaskell.com/) (Holy shit!)
 * [Write Yourself a Scheme in 48 Hours/First Steps](https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours/First_Steps)
 
+
 ### Husk Scheme [&#x219F;](#contents)
 
 From the [Husk Scheme Github project](https://github.com/justinethier/husk-scheme):
 
-> Husk is a dialect of Scheme written in Haskell that implements a superset of the R5RS standard and a large portion of the R7RS-small language. Advanced features are provided including continuations, hygienic macros, libraries, and a full numeric tower.
+> Husk is a dialect of Scheme written in Haskell that implements a superset of
+> the R5RS standard and a large portion of the R7RS-small language. Advanced
+> features are provided including continuations, hygienic macros, libraries,
+> and a full numeric tower.
 
-One of the key features of Husk is its [FFI to Haskell](http://justinethier.github.io/husk-scheme/manual/ffi.html), allowing developers to take advantage of the Haskell ecosystem's libraries within their Husk projects.
+One of the key features of Husk is its
+[FFI to Haskell](http://justinethier.github.io/husk-scheme/manual/ffi.html), allowing
+developers to take advantage of the Haskell ecosystem's libraries within their
+Husk projects.
 
 Key Husk resources:
 
 * [User manual](http://justinethier.github.io/husk-scheme/manual/index.html)
 * [Haskell interface](http://justinethier.github.io/husk-scheme/manual/haskell-interface.html)
 * [Scheme API docs](http://justinethier.github.io/husk-scheme/manual/node106.html)
+
 
 ## Dependencies [&#x219F;](#contents)
 
@@ -89,7 +102,8 @@ executed from the top-level (clone) directory.
 
 ## REPL [&#x219F;](#contents)
 
-To start the Husk REPL using the local install of Haskell and Husk, run the following ``stack`` command:
+To start the Husk REPL using the local install of Haskell and Husk, run the
+following ``stack`` command:
 
 ```
 $ stack exec huski
