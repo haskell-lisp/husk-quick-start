@@ -205,7 +205,52 @@ huski> (ackermann 3 4)
 
 ### Calling Haskell [&#x219F;](#contents)
 
-TBD
+The following calls load Haskell functions which have been prepared for use in Husk:
+
+```scheme
+huski> (load-ffi "Language.Scheme.Plugins.CPUTime" "precision" "cpu-time:precision")
+<IO primitive>
+huski> (load-ffi "Language.Scheme.Plugins.CPUTime" "get" "cpu-time:get")
+<IO primitive>
+```
+
+It takes the arguments of module name, function in the module, Husk name by
+which the function may be called. We can now use ``cpu-time:precision`` and
+``cpu-time:get`` in Husk:
+
+```scheme
+(define (display-cpu-info)
+  (display "CPU time: ")
+  (write (cpu-time:get))
+  (display "CPU time precision: ")
+  (write (cpu-time:precision))
+  (display "Seconds of CPU time spent: ")
+  (display (exact->inexact (/ (cpu-time:get) 1000000000000)))
+  (newline))
+```
+
+Note that Haskell functions called from Husk must first be properly wrapped.
+The above two functions were prepared in the following manner:
+
+```haskell
+module Language.Scheme.Plugins.CPUTime (get, precision) where
+
+import Language.Scheme.Types
+import System.CPUTime
+import Control.Monad.Error
+
+get, precision :: [LispVal] -> IOThrowsError LispVal
+
+-- |Wrapper for CPUTime.getCPUTime
+get [] = do
+  t <- liftIO $ System.CPUTime.getCPUTime
+  return $ Number t
+get badArgList = throwError $ NumArgs 0 badArgList
+
+-- |Wrapper for CPUTime.cpuTimePrecision
+precision [] = return $ Number $ System.CPUTime.cpuTimePrecision
+precision badArgList = throwError $ NumArgs 0 badArgList
+```
 
 
 ### Using Husk in a Project [&#x219F;](#contents)
