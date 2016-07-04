@@ -70,11 +70,31 @@ Key Husk resources:
 
 Once you have ``git`` and ``stack`` installed, you are ready to begin.
 
-1. Clone the quick-start repo and ``cd`` into its Haskell project directory:
+### Dead-Simple
+
+The quickest way to build is with the following:
+
+1. Clone the quick-start repo and ``cd`` into the clone directory:
 
     ```
     $ git clone https://github.com/haskell-lisp/husk-quick-start.git
-    $ cd husk-quick-start/husk-quickstart
+    $ cd husk-quick-start
+    ```
+
+1. Then:
+
+    ```
+    $ make
+    ```
+
+### Under the Covers
+
+That ``make`` target is actually performing the following.
+
+1. Change to the Haskell project directory:
+
+    ```
+    $ cd husk-quickstart
     ```
 
 1. Get the project's supported version of Haskell:
@@ -104,10 +124,6 @@ Once you have ``git`` and ``stack`` installed, you are ready to begin.
     $ stack build
     ```
 
-There is also a convenience ``make`` target provide that does both of these
-with one command: ``make build``. Note that the ``make`` target must be
-executed from the top-level (clone) directory.
-
 Note that, as long as husk-scheme is downloaded from a published source (i.e.,
 declared in the ``extra-deps`` section of the project ``stack.yaml``), you
 won't need to explicitly call ``stack build husk-scheme``. However, since we're
@@ -118,16 +134,16 @@ make the extra ``stack`` call.
 ## REPL [&#x219F;](#contents)
 
 To start the Husk REPL using the local install of Haskell and Husk, run the
-following ``stack`` command:
-
-```
-$ stack exec huski
-```
-
-or, from the top-level (clone) directory:
+following ``make`` target:
 
 ```
 $ make repl
+```
+
+Or use this ``stack`` command (from inside the Haskell project directory):
+
+```
+$ stack exec huski
 ```
 
 ```
