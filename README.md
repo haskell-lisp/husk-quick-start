@@ -23,6 +23,8 @@ This quick-start aims to get you up and running with Haskell, Husk Scheme, and
 the FFI for Husk. It will take you from 0 Kelvin to room temperature, putting
 within your grasp the heat of the sun's surface.
 
+Below is a quick blurb on each of Haskell and Husk.
+
 
 ### Haskell [&#x219F;](#contents)
 
