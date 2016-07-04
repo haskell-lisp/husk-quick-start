@@ -16,7 +16,7 @@ Library
   hs-source-dirs:      src
   Exposed-modules:     Lib
   Build-depends:       base >= 4.7 && < 5
-                       , husk-scheme
+                       --, husk-scheme
   Default-language:    Haskell2010
 
 source-repository head

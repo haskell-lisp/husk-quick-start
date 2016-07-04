@@ -91,7 +91,14 @@ Once you have ``git`` and ``stack`` installed, you are ready to begin.
     ghc-7.10.3:  113.16 MiB / 140.77 MiB ( 80.39%) downloaded...
     ```
 
-1. At this point you are ready to build the dependencies (using ``stack``):
+1. At this point you are ready to build Husk and its dependencies:
+
+    ```
+    $ stack build husk-scheme
+    ```
+
+1. And finally, any files we've created in our project (as well as project
+   dependencies):
 
     ```
     $ stack build
@@ -100,6 +107,12 @@ Once you have ``git`` and ``stack`` installed, you are ready to begin.
 There is also a convenience ``make`` target provide that does both of these
 with one command: ``make build``. Note that the ``make`` target must be
 executed from the top-level (clone) directory.
+
+Note that, as long as husk-scheme is downloaded from a published source (i.e.,
+declared in the ``extra-deps`` section of the project ``stack.yaml``), you
+won't need to explicitly call ``stack build husk-scheme``. However, since we're
+using a version of Husk that's only available in the Github repo, we need to
+make the extra ``stack`` call.
 
 
 ## REPL [&#x219F;](#contents)
