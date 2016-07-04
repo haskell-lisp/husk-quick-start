@@ -16,6 +16,9 @@
 * [Using Husk](#using-husk-)
   * [REPL](#repl-)
   * [First Function](#first-function-)
+  * [Calling Haskell](#calling-haskell-)
+  * [Using Husk in a Project](#using-husk-in-a-project-)
+  * [Calling Husk from Haskell](#calling-husk-from-haskell-)
 * [License](#license-)
 
 
@@ -72,7 +75,7 @@ Key Husk resources:
 
 Once you have ``git`` and ``stack`` installed, you are ready to begin.
 
-### Dead-Simple
+### Dead-Simple [&#x219F;](#contents)
 
 The quickest way to build is with the following:
 
@@ -89,7 +92,7 @@ The quickest way to build is with the following:
     $ make
     ```
 
-### Under the Covers
+### Under the Covers [&#x219F;](#contents)
 
 That ``make`` target is actually performing the following.
 
@@ -198,6 +201,21 @@ huski> (ackermann 3 3)
 huski> (ackermann 3 4)
 125
 ```
+
+
+### Calling Haskell [&#x219F;](#contents)
+
+TBD
+
+
+### Using Husk in a Project [&#x219F;](#contents)
+
+TBD
+
+
+### Calling Husk from Haskell [&#x219F;](#contents)
+
+TBD
 
 
 ## License [&#x219F;](#contents)
